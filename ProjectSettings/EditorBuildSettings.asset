@@ -5,48 +5,27 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
     path: Assets/Scenes/Inicio.unity
     guid: 29938f06cd7359e42aa84362ab0992a6
   - enabled: 1
-    path: Assets/Scenes/Escolhas.unity
-    guid: 86c8948ba7427e241b9a89132c643efe
-  - enabled: 1
-    path: "Assets/Scenes/Classifica\xE7\xE3o.unity"
-    guid: 51e33c3a2c404bf44adea1909f8bd2d6
-  - enabled: 1
-    path: Assets/Scenes/Hospital.unity
-    guid: 54f11ff902fa9fe4fb6448b885278a55
-  - enabled: 1
-    path: Assets/Scenes/CasaImo.unity
-    guid: a9c0006484d9d7f4d8e7802657a23a76
-  - enabled: 1
-    path: Assets/Scenes/Financeiro.unity
-    guid: aee1f13d8923ab94bb7e483f23b337d6
-  - enabled: 1
-    path: "Assets/Scenes/Educa\xE7\xE3o.unity"
-    guid: 7ba6491e8fea99242b5c4af5ecbd3626
-  - enabled: 1
-    path: Assets/Scenes/Tenis.unity
-    guid: 8a8e5a2fb2bad1340aee59cf6b299b59
-  - enabled: 1
     path: Assets/Scenes/Apartamento.unity
     guid: c1ab030a5103f8140834b7255b5a2fa5
   - enabled: 1
-    path: Assets/Scenes/Receita.unity
-    guid: 878fe16d56e19924689edb9378244228
+    path: Assets/Scenes/Cargos.unity
+    guid: 21c339ea9701e304ba25caaf5aadc35a
   - enabled: 1
     path: Assets/Scenes/Casa.unity
     guid: 713f2cb244a55c7409ceea9253d3e785
   - enabled: 1
-    path: Assets/Scenes/Mercado.unity
-    guid: 5ca63c805940ac64d8da3a72551cce93
+    path: Assets/Scenes/CasaImo.unity
+    guid: a9c0006484d9d7f4d8e7802657a23a76
   - enabled: 1
-    path: Assets/Scenes/Escritorio.unity
-    guid: 9de37bcc0b0c2704dba4049df0abe54c
+    path: "Assets/Scenes/Classifica\xE7\xE3o.unity"
+    guid: 51e33c3a2c404bf44adea1909f8bd2d6
   - enabled: 1
     path: "Assets/Scenes/Concession\xE1ria.unity"
     guid: 8bbde58c12171d747a3179400e53be42
@@ -54,15 +33,42 @@ EditorBuildSettings:
     path: Assets/Scenes/Corrida.unity
     guid: 1c79de5afbb3ae94a9345c80540a8f93
   - enabled: 1
-    path: Assets/Scenes/Cargos.unity
-    guid: 21c339ea9701e304ba25caaf5aadc35a
+    path: Assets/Scenes/Curso.unity
+    guid: 8c7a0b25c01761442be0153e60e1dc13
+  - enabled: 1
+    path: Assets/Scenes/Economicos.unity
+    guid: a70cd5dfe2db2a946b53d4251f5beb5d
+  - enabled: 1
+    path: "Assets/Scenes/Educa\xE7\xE3o.unity"
+    guid: 7ba6491e8fea99242b5c4af5ecbd3626
+  - enabled: 1
+    path: Assets/Scenes/Escolhas.unity
+    guid: 86c8948ba7427e241b9a89132c643efe
+  - enabled: 1
+    path: Assets/Scenes/Escritorio.unity
+    guid: 9de37bcc0b0c2704dba4049df0abe54c
+  - enabled: 1
+    path: Assets/Scenes/Financeiro.unity
+    guid: aee1f13d8923ab94bb7e483f23b337d6
+  - enabled: 1
+    path: Assets/Scenes/Hospital.unity
+    guid: 54f11ff902fa9fe4fb6448b885278a55
   - enabled: 1
     path: Assets/Scenes/Imobiliaria.unity
     guid: 1c29caa6233525845a4f5e6e24e4fb33
   - enabled: 1
+    path: Assets/Scenes/Importados.unity
+    guid: b02aebd70d662cd4d8293980a0769e03
+  - enabled: 1
+    path: Assets/Scenes/Mercado.unity
+    guid: 5ca63c805940ac64d8da3a72551cce93
+  - enabled: 1
+    path: Assets/Scenes/Receita.unity
+    guid: 878fe16d56e19924689edb9378244228
+  - enabled: 1
+    path: Assets/Scenes/Tenis.unity
+    guid: 8a8e5a2fb2bad1340aee59cf6b299b59
+  - enabled: 1
     path: Assets/Scenes/Trabalho.unity
     guid: 2bcf612062f670c4c92a8a7a1591f108
-  - enabled: 0
-    path: Assets/Scenes/Config.unity
-    guid: f02c2f7e43ff0904987160ad83804eb2
   m_configObjects: {}

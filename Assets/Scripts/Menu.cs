@@ -1,11 +1,18 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
+using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI; // Certifique-se de adicionar isso para trabalhar com UI
 
 public class Menu : MonoBehaviour
-{    public void Começar()
+{
+    public Button trabalhoButton; // Referência ao botão de trabalho
+
+    void Start()
+    {
+        AtualizarEstadoBotaoTrabalho();
+    }
+
+    public void Começar()
     {
         SceneManager.LoadScene("Escolhas");
     }
@@ -49,6 +56,7 @@ public class Menu : MonoBehaviour
     {
         SceneManager.LoadScene("CasaImo");
     }
+    
     public void Apart()
     {
         SceneManager.LoadScene("Apartamento");
@@ -82,5 +90,38 @@ public class Menu : MonoBehaviour
     public void Receita()
     {
         SceneManager.LoadScene("Receita");
+    }
+    
+    public void Corrida()
+    {
+        SceneManager.LoadScene("Corrida");
+    }
+
+    public void Economicos()
+    {
+        SceneManager.LoadScene("Economicos");
+    }
+
+    void AtualizarEstadoBotaoTrabalho()
+    {
+        int ultimoMes = PlayerPrefs.GetInt("UltimoMesTrabalho", -1);
+        int ultimoAno = PlayerPrefs.GetInt("UltimoAnoTrabalho", -1);
+        int mesAtual = DateTime.Now.Month;
+        int anoAtual = DateTime.Now.Year;
+
+        if (ultimoMes != mesAtual || ultimoAno != anoAtual)
+        {
+            // Liberar botão de trabalho
+            trabalhoButton.interactable = true;
+            PlayerPrefs.SetInt("UltimoMesTrabalho", mesAtual);
+            PlayerPrefs.SetInt("UltimoAnoTrabalho", anoAtual);
+        }
+        else
+        {
+            // Bloquear botão de trabalho
+            trabalhoButton.interactable = false;
+        }
+
+        PlayerPrefs.Save();
     }
 }

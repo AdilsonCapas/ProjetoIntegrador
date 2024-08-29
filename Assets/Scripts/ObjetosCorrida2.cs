@@ -2,33 +2,40 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class ObjetosCorrida2 : MonoBehaviour
 {
     public TMP_Text pontos;
-    public static int Pontos = 0; // Use 'static' para manter a pontuação entre instâncias
+    public static int Pontos = 0;
+
 
     void Start()
     {
-        updatePontos(); // Exibe a pontuação inicial ao iniciar o jogo
+        updatePontos();
+    }
+
+    void Update()
+    {
+        updatePontos();
     }
 
     void updatePontos()
     {
-        pontos.text = "Pontos: " + Pontos.ToString(); // Atualiza o texto com a pontuação atual
+        pontos.text = "Pontos: " + Pontos.ToString();
     }
 
-    private void OnCollisionEnter2D(Collision2D other) 
+
+    private void OnCollisionEnter2D(Collision2D other)
     {
-        if(other.gameObject.CompareTag("Chão"))
+        if (other.gameObject.CompareTag("Chão"))
         {
-            Destroy(gameObject); // Destrói o objeto ao tocar o chão
+            Destroy(gameObject);
         }
-        else if(other.gameObject.CompareTag("Player"))
+        else if (other.gameObject.CompareTag("Player"))
         {
-            Pontos++; // Incrementa a pontuação
-            updatePontos(); // Atualiza a UI dos pontos
-            Destroy(gameObject); // Destrói o objeto após a colisão com o player
+            Pontos++;
+            Destroy(gameObject);
         }
     }
 }

@@ -14,9 +14,12 @@ public class PlayerMovement : MonoBehaviour
     public bool isJumping = false;
     public bool comVida = true;
     public int Money = 0;
+    public int pontos;
+    public int salario = 0;
 
     void Start()
     {
+        salario = 0;
         rb = GetComponent<Rigidbody2D>();
         sprite = GetComponent<SpriteRenderer>();
     }
@@ -26,6 +29,12 @@ public class PlayerMovement : MonoBehaviour
         // Andar
         moveH = Input.GetAxis("Horizontal"); // -1 a 1
         transform.position += new Vector3(moveH * velocidade * Time.deltaTime, 0, 0);
+    }
+
+    void SalvarDados()
+    {
+        PlayerPrefs.SetInt("Salario", salario);
+        PlayerPrefs.Save();
     }
 
     void Update()
@@ -42,6 +51,14 @@ public class PlayerMovement : MonoBehaviour
             rb.AddForce(Vector2.up * forcaPulo, ForceMode2D.Impulse);
             isJumping = true;
         }
+
+        if(pontos == 10 && salario == 0)
+        {
+            salario = salario + 1;
+            SceneManager.LoadScene("Escritorio");
+            //PlayerPrefs.SetInt("Salario", salario);
+            SalvarDados();
+        }
     } 
 
     private void OnCollisionEnter2D(Collision2D other) 
@@ -49,6 +66,11 @@ public class PlayerMovement : MonoBehaviour
         if(other.gameObject.CompareTag("Chão"))
         {
             isJumping = false;
+        }
+        if(other.gameObject.CompareTag("ObjetosC"))
+        {
+            pontos++;
+            
         }
     }
 }

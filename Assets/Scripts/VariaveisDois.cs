@@ -83,13 +83,7 @@ public class VariaveisDois : MonoBehaviour
         SalvarDados();
     }
 
-    void AumentarCascalho()
-    {
-        money = money + 5000;
-
-        UpdateMoneyText();
-        SalvarDados();     
-    }
+  
 
     void SalvarDados()
     {
